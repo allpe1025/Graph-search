@@ -1,4 +1,6 @@
 #include "header.h"
+#include <windows.h>
+#include <stdio.h>
 
 /*
 인접행렬의 최대크기는 unsigned int만큼
@@ -16,6 +18,9 @@ void dfs(unsigned int** matrix, unsigned int size, int* visited, unsigned int* s
 void bfs(unsigned int** matrix, unsigned int size, int* visited, unsigned int* queue);
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    setvbuf(stdout, NULL, _IOFBF, 4096);
     
 	//input1.txt 처리
     printf("1. DFS / BFS\n\n");
